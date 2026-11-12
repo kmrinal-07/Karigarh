@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Dishes | KARIGAR</title>
+    <link rel="stylesheet" href="slay.css">
+    
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <h1>KARIGAR</h1>
+                <p>The Art of Indian Cuisine</p>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="dishes.html">Special Dishes</a></li>
+                <li><a href="mood.html">Mood Finder</a></li>
+                <li><a href="customize.html">Customize Food</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+            </ul>
+
+           
+
+        </nav>
+    </header>
+
+
+<section class="mood-section">
+
+
+
+    <div class="section-heading">
+        <h1>Food That Matches Your Mood</h1>
+        <p>
+            Tell us how you feel, and KARIGAR will
+            find the perfect cuisine and dish for you.
+        </p>
+    </div>
+
+    <div class="mood-grid">
+
+        <div class="mood-card">
+            <h3>😊 Happy</h3>
+            <p>Feeling cheerful and positive?</p>
+            <button onclick="recommendFood('Happy')">
+                Find My Food
+            </button>
+        </div>
+
+        <div class="mood-card">
+            <h3>😔 Sad</h3>
+            <p>Need something warm and comforting?</p>
+            <button onclick="recommendFood('Sad')">
+                Find My Food
+            </button>
+        </div>
+
+        <div class="mood-card">
+            <h3>🤩 Excited</h3>
+            <p>Ready to try something flavourful?</p>
+            <button onclick="recommendFood('Excited')">
+                Find My Food
+            </button>
+        </div>
+
+        <div class="mood-card">
+            <h3>😌 Relaxed</h3>
+            <p>Want something light and delicious?</p>
+            <button onclick="recommendFood('Relaxed')">
+                Find My Food
+            </button>
+        </div>
+
+        <div class="mood-card">
+            <h3>🤤 Hungry</h3>
+            <p>Looking for a satisfying meal?</p>
+            <button onclick="recommendFood('Hungry')">
+                Find My Food
+            </button>
+        </div>
+
+    </div>
+
+    <div id="recommendation-result"
+         class="recommendation-result">
+
+        <h2>Your Food Recommendation</h2>
+        <p>Select your mood to discover your perfect meal!</p>
+
+    </div>
+
+</section>
+
+ <footer>
+        <h2>KARIGAR</h2>
+        <p>The Art of Indian Cuisine</p>
+        <p>© 2026 KARIGAR Restaurant. All Rights Reserved.</p>
+    </footer>
+
+   
+
+    <script src="sr.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Food | KARIGAR</title>
+    <link rel="stylesheet" href="slay.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <h1>KARIGAR</h1>
+                <p>The Art of Indian Cuisine</p>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="dishes.html">Special Dishes</a></li>
+                <li><a href="mood.html">Mood Finder</a></li>
+                <li><a href="customize.html">Customize Food</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+            </ul>
+
+           
+
+        </nav>
+    </header>
+
+    <section class="customize-section">
+
+        <div class="section-heading">
+            <p>MADE JUST FOR YOU</p>
+            <h2>Customize Your Food</h2>
+            <p>Your food, your taste, your rules.</p>
+        </div>
+
+        <div class="customize-container">
+
+            <form id="customize-form">
+
+                <h3>01. Choose Your Favourite Dish</h3>
+
+                <label for="dish">Select Your Dish</label>
+
+                <select id="dish" name="dish" required>
+                    <option value="">Select a Dish</option>
+                    <option value="Paneer Tikka">Paneer Tikka</option>
+                    <option value="Butter Chicken">Butter Chicken</option>
+                    <option value="Dal Makhani">Dal Makhani</option>
+                    <option value="Biryani">Hyderabadi Biryani</option>
+                </select>
+
+                <p class="price-hint">
+                    Choose a dish to see its starting price.
+                </p>
+
+                <hr>
+
+                <h3>02. Choose Your Spice Level</h3>
+
+                <div class="spice-options">
+
+                    <label>
+                        <input type="radio" name="spice" value="Mild">
+                        Mild 🌶️
+                    </label>
+
+                    <label>
+                        <input type="radio" name="spice"
+                               value="Medium" checked>
+                        Medium 🌶️🌶️
+                    </label>
+
+                    <label>
+                        <input type="radio" name="spice"
+                               value="Extra Spicy">
+                        Extra Spicy 🌶️🌶️🌶️
+                    </label>
+
+                </div>
+
+                <hr>
+
+                <h3>03. Select Your Portion</h3>
+
+                <label for="portion">Portion Size</label>
+
+                <select id="portion" name="portion">
+                    <option value="Regular">Regular</option>
+                    <option value="Large">Large (+₹100)</option>
+                    <option value="Family Pack">Family Pack (+₹250)</option>
+                </select>
+
+                <hr>
+
+                <h3>04. Add Something Extra</h3>
+
+                <div class="addons">
+
+                    <label>
+                        <input type="checkbox" name="addons"
+                               value="Extra Cheese" data-price="40">
+                        Extra Cheese (+₹40)
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="addons"
+                               value="Extra Butter" data-price="30">
+                        Extra Butter (+₹30)
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="addons"
+                               value="Extra Gravy" data-price="50">
+                        Extra Gravy (+₹50)
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="addons"
+                               value="Extra Paneer" data-price="60">
+                        Extra Paneer (+₹60)
+                    </label>
+
+                </div>
+
+                <hr>
+
+                <h3>05. Quantity</h3>
+
+                <label for="quantity">Number of Portions</label>
+
+                <input type="number" id="quantity"
+                       name="quantity" min="1" max="20"
+                       value="1" required>
+
+                <hr>
+
+                <h3>06. Special Instructions</h3>
+
+                <textarea id="instructions"
+                          name="instructions"
+                          rows="4"
+                          maxlength="300"
+                          placeholder="Example: Less oil, extra crispy, no onion..."></textarea>
+
+                <p class="price-hint">
+                    Maximum 300 characters.
+                </p>
+
+                <button type="submit" id="order-button">
+                    Place My Order
+                </button>
+
+            </form>
+
+            <!-- LIVE ORDER SUMMARY -->
+
+            <div class="order-summary">
+
+                <p class="summary-tag">YOUR PERSONALIZED ORDER</p>
+
+                <h2>Order Summary</h2>
+
+                <div class="summary-item">
+                    <span>Selected Dish</span>
+                    <strong id="summary-dish">Not selected</strong>
+                </div>
+
+                <div class="summary-item">
+                    <span>Base Price</span>
+                    <strong id="base-price">₹0</strong>
+                </div>
+
+                <div class="summary-item">
+                    <span>Portion Extra</span>
+                    <strong id="portion-price">₹0</strong>
+                </div>
+
+                <div class="summary-item">
+                    <span>Add-ons</span>
+                    <strong id="addon-price">₹0</strong>
+                </div>
+
+                <div class="summary-item">
+                    <span>Quantity</span>
+                    <strong id="summary-quantity">1</strong>
+                </div>
+
+                <div class="summary-item">
+                    <span>Spice Level</span>
+                    <strong id="summary-spice">Medium</strong>
+                </div>
+
+                <hr>
+
+                <div class="total-price">
+                    <span>Final Total</span>
+                    <h2 id="final-price">₹0</h2>
+                </div>
+
+                <p class="summary-note">
+                    Your meal, customized with care by KARIGAR.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <h2>KARIGAR</h2>
+        <p>The Art of Indian Cuisine</p>
+        <p>© 2026 KARIGAR Restaurant. All Rights Reserved.</p>
+    </footer>
+
+    <script src="sr.js"></script>
+
+</body>
+</html>

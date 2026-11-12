@@ -1,0 +1,890 @@
+/* =========================================================
+   KARIGAR - SHARED STYLESHEET
+   Royal Indian fine-dining | Black, Gold & Warm Ivory
+   Save this file as: style.css
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --black: #100d0a;
+    --black-soft: #19140f;
+    --panel: #211a13;
+    --gold: #d6ad60;
+    --gold-light: #f0d69b;
+    --cream: #f7f0e4;
+    --muted: #c4b8a5;
+    --white: #fffaf1;
+    --border: rgba(214, 173, 96, 0.28);
+    --shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--black);
+    color: var(--cream);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button, input, select, textarea {
+    font: inherit;
+}
+
+button, .btn, .nav-button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* -------------------- NAVIGATION -------------------- */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(16, 13, 10, 0.96);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+}
+
+.navbar {
+    width: min(1200px, 92%);
+    min-height: 88px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo h1, footer h2 {
+    color: var(--gold);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.35rem;
+    line-height: 1;
+    letter-spacing: 4px;
+}
+
+.logo p {
+    color: var(--muted);
+    font-size: 0.68rem;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    margin-top: 7px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 23px;
+    list-style: none;
+}
+
+.nav-links a, .footer-links a {
+    color: var(--cream);
+    font-size: 0.86rem;
+    transition: color 0.25s ease;
+}
+
+.nav-links a:hover, .footer-links a:hover {
+    color: var(--gold);
+}
+
+.nav-button, .btn {
+    display: inline-block;
+    padding: 11px 21px;
+    border: 1px solid var(--gold);
+    border-radius: 3px;
+    background: var(--gold);
+    color: var(--black);
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+
+.nav-button:hover, .btn:hover {
+    background: transparent;
+    color: var(--gold);
+    transform: translateY(-2px);
+}
+
+/* -------------------- SHARED SECTION STYLES -------------------- */
+
+section {
+    padding: 85px max(4%, calc((100% - 1200px) / 2));
+}
+
+.section-heading {
+    max-width: 760px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.section-heading > p:first-child,
+.welcome,
+.about-content > p:first-child,
+.experience-content > p:first-child,
+.reservation-content > p:first-child,
+.summary-tag {
+    color: var(--gold);
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.section-heading h1,
+.section-heading h2,
+.about-content h2,
+.history-text h3,
+.experience-content h2,
+.reservation-content h2 {
+    color: var(--gold-light);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    line-height: 1.12;
+    margin: 12px 0 17px;
+}
+
+.section-heading > p:last-child {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 24px 0;
+}
+
+/* -------------------- HOME PAGE -------------------- */
+
+.hero {
+    min-height: 680px;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg, rgba(10, 8, 6, 0.94) 0%, rgba(10, 8, 6, 0.72) 52%, rgba(10, 8, 6, 0.22) 100%),
+        url("images/royal-dining.jpg") center/cover no-repeat;
+}
+
+.hero-content {
+    width: min(1200px, 92%);
+    margin: auto;
+    max-width: 1200px;
+}
+
+.hero-content h1 {
+    max-width: 760px;
+    margin: 22px 0;
+    color: var(--white);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3.2rem, 7vw, 6rem);
+    line-height: 0.98;
+}
+
+.hero-content h1 span {
+    display: block;
+    color: var(--gold);
+}
+
+.hero-content > p:not(.welcome) {
+    max-width: 650px;
+    margin-bottom: 28px;
+    color: #eee1ce;
+}
+
+.hero-content .btn {
+    margin: 0 10px 10px 0;
+}
+
+.about-section, .experience-section {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 55px;
+    background: #17120e;
+}
+
+.about-content h2, .experience-content h2 {
+    margin: 13px 0 22px;
+}
+
+.about-content > p:not(:first-child),
+.experience-content > p:not(:first-child) {
+    color: var(--muted);
+    margin-bottom: 24px;
+    white-space: pre-line;
+}
+
+.about-image img, .experience-image img, .history-image img {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+}
+
+.history-section {
+    background: #100d0a;
+}
+
+.history-content {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.history-text h3 {
+    font-size: 2rem;
+}
+
+.history-text p {
+    color: var(--muted);
+    margin: 0 0 15px;
+}
+
+.journey-section, .authenticity-section, .signature-section,
+.why-section, .testimonial-section {
+    background: #17120e;
+}
+
+.journey-container, .authenticity-container, .signature-container,
+.why-container, .testimonial-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.journey-card, .authenticity-card, .dish-card, .why-card,
+.testimonial-card, .mood-card, .order-summary {
+    background: linear-gradient(145deg, #251c14, #17120e);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    box-shadow: var(--shadow);
+}
+
+.journey-card, .why-card, .testimonial-card {
+    padding: 27px 23px;
+}
+
+.journey-card h3 {
+    color: var(--gold);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.3rem;
+}
+
+.journey-card h4, .why-card h3, .testimonial-card h4 {
+    color: var(--gold-light);
+    margin: 7px 0 12px;
+}
+
+.journey-card p, .why-card p, .testimonial-card p {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.authenticity-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.authenticity-card {
+    overflow: hidden;
+    padding-bottom: 22px;
+}
+
+.authenticity-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.authenticity-card h3, .authenticity-card p {
+    margin: 16px 20px 0;
+}
+
+.authenticity-card h3 {
+    color: var(--gold-light);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.55rem;
+}
+
+.authenticity-card p {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.signature-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-bottom: 35px;
+}
+
+.signature-container .dish-card {
+    padding-bottom: 22px;
+}
+
+.signature-container .dish-card p {
+    padding: 0 20px;
+}
+
+.signature-section > .btn {
+    display: table;
+    margin: 0 auto;
+}
+
+.experience-section {
+    background: #100d0a;
+}
+
+.why-container {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.testimonial-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.reservation-banner {
+    text-align: center;
+    background:
+        linear-gradient(rgba(12, 9, 6, 0.82), rgba(12, 9, 6, 0.88)),
+        url("images/restaurant-interior.jpg") center/cover no-repeat;
+}
+
+.reservation-content h2 {
+    max-width: 750px;
+    margin: 14px auto;
+}
+
+.reservation-content > p:not(:first-child) {
+    color: var(--muted);
+    margin-bottom: 25px;
+}
+
+.contact-section {
+    background: #17120e;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-info {
+    width: min(600px, 100%);
+    padding: 30px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+}
+
+.contact-info h3 {
+    color: var(--gold-light);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    color: var(--muted);
+    margin: 10px 0;
+}
+
+/* -------------------- DISHES PAGE -------------------- */
+
+.special-dishes {
+    background: radial-gradient(circle at top, #302114 0, #100d0a 55%);
+}
+
+.dish-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.dish-card {
+    overflow: hidden;
+    padding-bottom: 24px;
+    text-align: center;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.dish-card:hover, .mood-card:hover, .authenticity-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--gold);
+}
+
+.dish-card img {
+    width: 100%;
+    height: 215px;
+    object-fit: cover;
+}
+
+.dish-card h3 {
+    margin: 18px 12px 8px;
+    color: var(--gold-light);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.55rem;
+}
+
+.dish-card p {
+    min-height: 72px;
+    padding: 0 17px;
+    color: var(--muted);
+    font-size: 0.86rem;
+}
+
+.dish-card h4 {
+    margin: 12px 0 16px;
+    color: var(--gold);
+    font-size: 1.15rem;
+}
+
+.dish-card a {
+    display: inline-block;
+    padding: 9px 17px;
+    border: 1px solid var(--gold);
+    border-radius: 3px;
+    color: var(--gold);
+    font-size: 0.82rem;
+    transition: 0.2s ease;
+}
+
+.dish-card a:hover {
+    background: var(--gold);
+    color: var(--black);
+}
+
+/* -------------------- MOOD FINDER PAGE -------------------- */
+
+.mood-section {
+    min-height: 75vh;
+    background: radial-gradient(circle at top right, #352316, #100d0a 58%);
+}
+
+.mood-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.mood-card {
+    padding: 25px 17px;
+    text-align: center;
+    transition: 0.25s ease;
+}
+
+.mood-card h3 {
+    color: var(--gold-light);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+}
+
+.mood-card p {
+    min-height: 55px;
+    margin: 10px 0 18px;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.mood-card button, #recommendation-result button {
+    padding: 9px 15px;
+    border: 1px solid var(--gold);
+    border-radius: 3px;
+    background: var(--gold);
+    color: var(--black);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.82rem;
+}
+
+.mood-card button:hover, #recommendation-result button:hover {
+    background: transparent;
+    color: var(--gold);
+}
+
+.recommendation-result {
+    max-width: 800px;
+    margin: 40px auto 0;
+    padding: 28px;
+    text-align: center;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+}
+
+.recommendation-result h2 {
+    color: var(--gold-light);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.recommendation-result p {
+    color: var(--muted);
+}
+
+/* -------------------- CUSTOMIZE PAGE -------------------- */
+
+.customize-section {
+    background: radial-gradient(circle at top left, #332214, #100d0a 58%);
+}
+
+.customize-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
+    align-items: start;
+    gap: 32px;
+}
+
+#customize-form, .reservation-container form {
+    padding: 34px;
+    background: #1d1711;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    box-shadow: var(--shadow);
+}
+
+#customize-form h3 {
+    margin-bottom: 16px;
+    color: var(--gold-light);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.55rem;
+}
+
+#customize-form label, #reservation-form label {
+    display: block;
+    margin: 13px 0 7px;
+    color: var(--cream);
+    font-size: 0.9rem;
+}
+
+#customize-form input[type="text"],
+#customize-form input[type="number"],
+#customize-form select,
+#customize-form textarea,
+#reservation-form input,
+#reservation-form select {
+    width: 100%;
+    min-height: 45px;
+    padding: 10px 12px;
+    border: 1px solid rgba(214, 173, 96, 0.35);
+    border-radius: 4px;
+    outline: none;
+    background: #100d0a;
+    color: var(--white);
+}
+
+#customize-form select:focus,
+#customize-form input:focus,
+#customize-form textarea:focus,
+#reservation-form input:focus,
+#reservation-form select:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(214, 173, 96, 0.12);
+}
+
+#customize-form input[type="radio"],
+#customize-form input[type="checkbox"] {
+    accent-color: var(--gold);
+    margin-right: 7px;
+}
+
+.spice-options, .addons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px 18px;
+}
+
+.spice-options label, .addons label {
+    display: flex !important;
+    align-items: center;
+    margin: 5px 0 !important;
+    color: var(--muted) !important;
+}
+
+.price-hint {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 0.78rem;
+}
+
+#customize-form textarea {
+    resize: vertical;
+}
+
+#order-button, #reservation-form button, #new-reservation {
+    width: 100%;
+    margin-top: 24px;
+    padding: 13px 20px;
+    border: 1px solid var(--gold);
+    border-radius: 3px;
+    background: var(--gold);
+    color: var(--black);
+    cursor: pointer;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+#order-button:hover, #reservation-form button:hover, #new-reservation:hover {
+    background: transparent;
+    color: var(--gold);
+}
+
+.order-summary {
+    position: sticky;
+    top: 115px;
+    padding: 28px;
+}
+
+.order-summary h2 {
+    margin: 8px 0 24px;
+    color: var(--gold-light);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(214, 173, 96, 0.13);
+    color: var(--muted);
+    font-size: 0.88rem;
+}
+
+.summary-item strong {
+    color: var(--cream);
+    text-align: right;
+}
+
+.total-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    color: var(--gold-light);
+}
+
+.total-price h2 {
+    margin: 0;
+    color: var(--gold);
+}
+
+.summary-note {
+    margin-top: 20px;
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+/* -------------------- RESERVATION PAGE -------------------- */
+
+.reservation-section {
+    min-height: 80vh;
+    background: radial-gradient(circle at top, #352316, #100d0a 60%);
+}
+
+.reservation-container {
+    max-width: 680px;
+    margin: auto;
+}
+
+#reservation-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#reservation-form label {
+    margin-top: 13px;
+}
+
+#reservation-form button {
+    width: 100%;
+}
+
+.success-message {
+    padding: 40px;
+    text-align: center;
+    background: #1d1711;
+    border: 1px solid var(--gold);
+    border-radius: 7px;
+    box-shadow: var(--shadow);
+}
+
+.success-icon {
+    width: 65px;
+    height: 65px;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: var(--gold);
+    color: var(--black);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.success-message h2, .success-message h3 {
+    color: var(--gold-light);
+    font-family: 'Cormorant Garamond', serif;
+    margin: 10px 0;
+}
+
+.success-message p {
+    color: var(--muted);
+    margin: 10px 0;
+}
+
+.success-message .thank-you {
+    color: var(--gold);
+    font-weight: 600;
+}
+
+/* -------------------- FOOTER -------------------- */
+
+footer {
+    padding: 45px 20px 25px;
+    text-align: center;
+    background: #090705;
+    border-top: 1px solid var(--border);
+}
+
+footer h2 {
+    margin-bottom: 12px;
+}
+
+footer p {
+    margin: 7px 0;
+    color: var(--muted);
+    font-size: 0.83rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin: 20px 0;
+}
+
+/* -------------------- RESPONSIVE DESIGN -------------------- */
+
+@media (max-width: 1050px) {
+    .navbar {
+        padding: 15px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+    }
+
+    .dish-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .mood-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .journey-container, .why-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 760px) {
+    section {
+        padding: 65px 5%;
+    }
+
+    .about-section, .experience-section, .history-content,
+    .customize-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image img, .experience-image img, .history-image img {
+        height: 300px;
+    }
+
+    .authenticity-container, .signature-container,
+    .testimonial-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .order-summary {
+        position: static;
+    }
+
+    .hero {
+        min-height: 590px;
+        background-position: 60% center;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(2.8rem, 12vw, 4.5rem);
+    }
+}
+
+@media (max-width: 520px) {
+    .logo h1 {
+        font-size: 2rem;
+    }
+
+    .nav-links {
+        gap: 10px 15px;
+    }
+
+    .nav-links a {
+        font-size: 0.78rem;
+    }
+
+    .nav-button {
+        padding: 9px 14px;
+    }
+
+    .dish-container, .mood-grid, .journey-container,
+    .authenticity-container, .signature-container,
+    .why-container, .testimonial-container,
+    .spice-options, .addons {
+        grid-template-columns: 1fr;
+    }
+
+    #customize-form, .reservation-container form {
+        padding: 22px;
+    }
+
+    .success-message {
+        padding: 25px 20px;
+    }
+
+    .hero-content .btn {
+        display: table;
+        margin-bottom: 12px;
+    }
+}
