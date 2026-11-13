@@ -1,14 +1,9 @@
 
-/* =========================================
-   KARIGAR RESTAURANT - COMMON JAVASCRIPT
-   Works with all four HTML webpages
-========================================= */
+
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    /* =====================================
-       1. CUSTOMIZE FOOD PAGE
-    ===================================== */
+  
 
     const customizeForm = document.getElementById("customize-form");
 
@@ -129,9 +124,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* =====================================
-       2. TABLE RESERVATION PAGE
-    ===================================== */
 
     const reservationForm =
         document.getElementById("reservation-form");
@@ -226,9 +218,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* =====================================
-       3. MOOD FINDER PAGE
-    ===================================== */
 
     const recommendationResult =
         document.getElementById("recommendation-result");
@@ -273,7 +262,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
 
-    // Called by the mood buttons in mood.html
+   
 
     window.recommendFood = function (mood) {
 
@@ -323,9 +312,6 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
 
-    /* =====================================
-       4. COMMON NAVIGATION
-    ===================================== */
 
     const currentPage =
         window.location.pathname.split("/").pop() || "home.html";
