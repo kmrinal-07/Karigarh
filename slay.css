@@ -1,8 +1,4 @@
-/* =========================================================
-   KARIGAR - SHARED STYLESHEET
-   Royal Indian fine-dining | Black, Gold & Warm Ivory
-   Save this file as: style.css
-   ========================================================= */
+
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
@@ -55,7 +51,6 @@ button, .btn, .nav-button {
     -webkit-tap-highlight-color: transparent;
 }
 
-/* -------------------- NAVIGATION -------------------- */
 
 header {
     position: sticky;
@@ -129,7 +124,6 @@ header {
     transform: translateY(-2px);
 }
 
-/* -------------------- SHARED SECTION STYLES -------------------- */
 
 section {
     padding: 85px max(4%, calc((100% - 1200px) / 2));
@@ -178,7 +172,6 @@ hr {
     margin: 24px 0;
 }
 
-/* -------------------- HOME PAGE -------------------- */
 
 .hero {
     min-height: 680px;
@@ -413,7 +406,6 @@ hr {
     margin: 10px 0;
 }
 
-/* -------------------- DISHES PAGE -------------------- */
 
 .special-dishes {
     background: radial-gradient(circle at top, #302114 0, #100d0a 55%);
@@ -478,7 +470,6 @@ hr {
     color: var(--black);
 }
 
-/* -------------------- MOOD FINDER PAGE -------------------- */
 
 .mood-section {
     min-height: 75vh;
@@ -547,7 +538,6 @@ hr {
     color: var(--muted);
 }
 
-/* -------------------- CUSTOMIZE PAGE -------------------- */
 
 .customize-section {
     background: radial-gradient(circle at top left, #332214, #100d0a 58%);
@@ -701,7 +691,6 @@ hr {
     font-size: 0.8rem;
 }
 
-/* -------------------- RESERVATION PAGE -------------------- */
 
 .reservation-section {
     min-height: 80vh;
@@ -764,7 +753,6 @@ hr {
     font-weight: 600;
 }
 
-/* -------------------- FOOTER -------------------- */
 
 footer {
     padding: 45px 20px 25px;
@@ -791,7 +779,6 @@ footer p {
     margin: 20px 0;
 }
 
-/* -------------------- RESPONSIVE DESIGN -------------------- */
 
 @media (max-width: 1050px) {
     .navbar {
